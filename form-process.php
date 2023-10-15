@@ -1,11 +1,19 @@
 <?php
+
 include("config.php");
 extract($_POST);
-$sql = "INSERT INTO `contactdata`(`firstname`, `lastname`, `phone`, `email`, `message`) VALUES ('".$firstname."','".$lastname."',".$phone.",'".$email."','".$message."')";
+
+// Use the variables to insert the actual form values
+$sql = "INSERT INTO `contact-data`(`firstname`, `lastname`, `phone`,`gender`, `email`, `messages`, `confirmation`) 
+        VALUES ('$firstname', '$lastname', '$phone', '$gender', '$email', '$message', '$confirmation')";
+
 $result = $mysqli->query($sql);
+
+
 if(!$result){
-    die("Couldn't enter data: ".$mysqli->error);
+    die("Couldn't enter data: " . $mysqli->error);
 }
-echo "Thank You For Contacting Us ";
+
+echo "Thank You For Contacting Us";
+
 $mysqli->close();
-?>

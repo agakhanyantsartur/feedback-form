@@ -4,7 +4,6 @@ SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
-
 DROP TABLE IF EXISTS `contactdata`;
 CREATE TABLE IF NOT EXISTS `contactdata` (
   `id` int(11) NOT NULL AUTO_INCREMENT,

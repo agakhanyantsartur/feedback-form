@@ -1,7 +1,9 @@
 <?php
-define("DB_HOST","localhost");
-define("DB_USER","root");
-define("DB_PASSWORD","");
-define("DB_NAME","contactdata");
-$mysqli = new mysqli(DB_HOST,DB_USER, DB_PASSWORD,DB_NAME);
+$DB_HOST = "localhost";
+$DB_USER = "root";
+$DB_PASSWORD = "admin";
+$DB_NAME = "contact-form";
+
+
+$mysqli = new mysqli($DB_HOST, $DB_USER, $DB_PASSWORD, $DB_NAME);
 ?>
